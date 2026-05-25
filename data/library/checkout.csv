@@ -1,0 +1,6 @@
+checkout_id,branch_id,material_type,duration_days,fine_amount,checkout_date
+CO001,B001,Book,14,0.00,2026-01-02
+CO002,B001,DVD,7,1.50,2026-01-03
+CO003,B002,Book,21,0.00,2026-01-04
+CO004,B002,Magazine,7,0.50,2026-01-05
+CO005,B003,Book,14,0.00,2026-01-06

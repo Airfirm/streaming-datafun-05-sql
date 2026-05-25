@@ -1,0 +1,6 @@
+attendance_id,civic_event_id,attendee_type,checked_in,contribution,attend_date
+AT001,E001,Member,1,50.00,2026-01-10
+AT002,E001,Guest,1,25.00,2026-01-10
+AT003,E002,Member,1,0.00,2026-01-11
+AT004,E002,Guest,1,10.00,2026-01-11
+AT005,E003,Guest,1,20.00,2026-01-12

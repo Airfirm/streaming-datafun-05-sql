@@ -1,0 +1,6 @@
+adoption_id,shelter_id,animal_type,outcome,fee,adopt_date
+AD001,H001,Dog,Adoption,150.00,2026-01-03
+AD002,H001,Cat,Adoption,75.00,2026-01-04
+AD003,H002,Dog,Foster,0.00,2026-01-05
+AD004,H002,Cat,Adoption,60.00,2026-01-06
+AD005,H003,Dog,Adoption,120.00,2026-01-07

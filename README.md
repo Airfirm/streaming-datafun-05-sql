@@ -1,4 +1,249 @@
-# Streaming Data Analytics
+# Streaming Data Analytics with Python / SQL
+
+## Project Overview
+
+This project demonstrates how Python and SQL can be used to load CSV data into local databases and turn raw records into useful business intelligence.
+
+The project includes two custom data pipelines:
+
+1. `femi_sqlite_library.py`
+2. `femi_duckdb_civic_event.py`
+
+The first pipeline uses SQLite to analyze library branch and checkout data. The second pipeline uses DuckDB to analyze civic event and attendance data.
+
+The main goal of this project is to practice working with data-at-rest by loading structured CSV files into databases, querying the data with SQL, and interpreting the results from an analyst perspective.
+
+---
+
+## Project Files
+
+### Python Files
+
+- `femi_sqlite_library.py`
+- `femi_duckdb_civic_event.py`
+
+### Data Folders
+
+The library project uses:
+
+- `data/library/branch.csv`
+- `data/library/checkout.csv`
+
+The civic event project uses:
+
+- `data/civic_event/civic_event.csv`
+- `data/civic_event/attendance.csv`
+
+### Artifact Outputs
+
+The SQLite library pipeline creates:
+
+- `artifacts/sqlite/library.sqlite`
+
+The DuckDB civic event pipeline creates:
+
+- `artifacts/duckdb/civic_event.duckdb`
+
+These database files are binary database files, so they may not open directly as readable text in VS Code. The best way to verify them is by running the Python scripts and reviewing the query results in the terminal logs.
+
+---
+
+## Dataset
+
+This project uses two custom datasets.
+
+### Library Dataset
+
+The library dataset is stored in the `data/library/` folder.
+
+The file `branch.csv` includes library branch information such as:
+
+- `branch_id`
+- `branch_name`
+- `city`
+- `system_name`
+
+The file `checkout.csv` includes checkout activity such as:
+
+- `checkout_id`
+- `branch_id`
+- `material_type`
+- `duration_days`
+- `fine_amount`
+- `checkout_date`
+
+Each checkout record connects to a library branch using the `branch_id` field.
+
+### Civic Event Dataset
+
+The civic event dataset is stored in the `data/civic_event/` folder.
+
+The file `civic_event.csv` includes civic event information such as:
+
+- `civic_event_id`
+- `event_name`
+- `location`
+- `organizer`
+
+The file `attendance.csv` includes attendance activity such as:
+
+- `attendance_id`
+- `civic_event_id`
+- `attendee_type`
+- `checked_in`
+- `contribution`
+- `attend_date`
+
+Each attendance record connects to a civic event using the `civic_event_id` field.
+
+---
+
+## Signals
+
+The main signals in the library project include:
+
+- branch location
+- library system name
+- material type
+- checkout duration
+- fine amount
+- checkout date
+
+These signals help answer questions about library usage, popular materials, branch activity, and fine totals.
+
+The main signals in the civic event project include:
+
+- event name
+- event location
+- organizer
+- attendee type
+- checked-in status
+- contribution amount
+- attendance date
+
+These signals help answer questions about event participation, attendee behavior, contribution totals, and civic engagement.
+
+The SQL queries create additional analytical signals, including:
+
+- total checkout records
+- total fine amount
+- checkouts by branch
+- checkouts by material type
+- average checkout duration
+- total civic event attendance records
+- total contributions
+- attendance by attendee type
+- contributions by event
+- checked-in counts by event
+
+---
+
+## Experiments
+
+For this project, I modified the original retail database example and applied the same Python and SQL skills to two new problems.
+
+### SQLite Library Experiment
+
+I created `femi_sqlite_library.py` to analyze library branch and checkout data.
+
+Instead of using retail store and sales data, I changed the pipeline to point to:
+
+- `data/library/branch.csv`
+- `data/library/checkout.csv`
+
+I also changed the database output to:
+
+- `artifacts/sqlite/library.sqlite`
+
+This experiment focused on library checkout analytics.
+
+### DuckDB Civic Event Experiment
+
+I created `femi_duckdb_civic_event.py` to analyze civic event and attendance data.
+
+Instead of using retail data, I changed the pipeline to point to:
+
+- `data/civic_event/civic_event.csv`
+- `data/civic_event/attendance.csv`
+
+I also changed the database output to:
+
+- `artifacts/duckdb/civic_event.duckdb`
+
+This experiment focused on civic event participation analytics.
+
+---
+
+## Results
+
+After running `femi_sqlite_library.py`, the script created a SQLite database file in the artifacts folder:
+
+```text
+artifacts/sqlite/library.sqlite
+
+The script loaded branch and checkout data into database tables and ran SQL queries to summarize library activity.
+
+The results helped show:
+
+how many library branches were included
+how many checkout records were processed
+which branches had checkout activity
+which material types were checked out
+how much fine money was recorded
+average checkout duration
+
+After running femi_duckdb_civic_event.py, the script created a DuckDB database file in the artifacts folder:
+
+artifacts/duckdb/civic_event.duckdb
+
+The script loaded civic event and attendance data into database tables and ran SQL queries to summarize event participation.
+
+The results helped show:
+
+how many civic events were included
+how many attendance records were processed
+which events had participation
+which attendee types were represented
+how many people checked in
+how much contribution money was collected
+Interpretation
+
+This project shows how Python and SQL can work together to create repeatable analytics pipelines.
+
+Python is used to automate the process of reading files, creating databases, loading data, and running queries. SQL is used to organize, join, filter, group, and summarize the data.
+
+The library project provides business intelligence about library usage. A library system could use these results to identify active branches, popular materials, fine totals, and checkout behavior.
+
+The civic event project provides business intelligence about community engagement. A civic organization could use these results to identify successful events, understand attendee participation, compare member and guest activity, and evaluate contribution totals.
+
+Overall, this project shows the value of moving beyond raw CSV files. By loading the data into SQLite and DuckDB, the information becomes easier to query, analyze, and use for decision-making.
+
+How to Run
+
+Run the SQLite library pipeline:
+
+uv run python -m datafun_05_sql.femi_sqlite_library
+
+Run the DuckDB civic event pipeline:
+
+uv run python -m datafun_05_sql.femi_duckdb_civic_event
+
+Use the correct package name for your project if your folder name is different.
+
+What I Learned
+
+Through this project, I learned how to:
+
+load CSV data into databases
+use Python to automate database workflows
+use SQLite for local relational data storage
+use DuckDB for analytical database work
+write queries that summarize business activity
+connect related tables with shared ID fields
+interpret query results from an analyst perspective
+
+This helped me better understand how data-at-rest can support streaming and analytics projects by making information easier to store, query, and analyze over time.
+
 
 ## streaming-datafun-05-sql
 
@@ -75,14 +320,12 @@ Follow the detailed instructions at:
 
 ```shell
 git clone https://github.com/YOURACCOUNT/datafun-05-sql
-```
 
 4. Open project in VS Code: Change directory into the repo and open the project in VS Code by running `code .` ("code dot"):
 
 ```shell
 cd datafun-05-sql
 code .
-```
 
 5. Install recommended extensions.
    - When VS Code opens, accept the Extension Recommendations (click **`Install All`** or similar when asked).

@@ -1,0 +1,62 @@
+2026-05-25 15:44:41 | INFO | P05 | === RUN START ===
+2026-05-25 15:44:41 | INFO | P05 | project=P05 Pipeline Example (SQLite)
+2026-05-25 15:44:41 | INFO | P05 | repo_dir=streaming-datafun-05-sql
+2026-05-25 15:44:41 | INFO | P05 | python=3.14.2
+2026-05-25 15:44:41 | INFO | P05 | os=Windows 11
+2026-05-25 15:44:41 | INFO | P05 | shell=powershell
+2026-05-25 15:44:41 | INFO | P05 | cwd=.
+2026-05-25 15:44:41 | INFO | P05 | github_actions=False
+2026-05-25 15:44:41 | INFO | P05 | START main()
+2026-05-25 15:44:41 | INFO | P05 | ROOT_DIR: C:\Repos\streaming-datafun-05-sql
+2026-05-25 15:44:41 | INFO | P05 | DATA_DIR: C:\Repos\streaming-datafun-05-sql\data\retail
+2026-05-25 15:44:41 | INFO | P05 | SQL_DIR: C:\Repos\streaming-datafun-05-sql\sql\sqlite
+2026-05-25 15:44:41 | INFO | P05 | DB_PATH: C:\Repos\streaming-datafun-05-sql\artifacts\sqlite\retail.sqlite
+2026-05-25 15:44:41 | INFO | P05 | RUN SQL script: C:\Repos\streaming-datafun-05-sql\sql\sqlite\case_retail_clean.sql
+2026-05-25 15:44:41 | INFO | P05 | DONE SQL script: C:\Repos\streaming-datafun-05-sql\sql\sqlite\case_retail_clean.sql
+2026-05-25 15:44:41 | INFO | P05 | RUN SQL script: C:\Repos\streaming-datafun-05-sql\sql\sqlite\case_retail_bootstrap.sql
+2026-05-25 15:44:41 | INFO | P05 | DONE SQL script: C:\Repos\streaming-datafun-05-sql\sql\sqlite\case_retail_bootstrap.sql
+2026-05-25 15:44:41 | INFO | P05 | LOAD CSV -> table store: C:\Repos\streaming-datafun-05-sql\data\retail\store.csv
+2026-05-25 15:44:41 | INFO | P05 | DONE loading store rows: 3
+2026-05-25 15:44:41 | INFO | P05 | LOAD CSV -> table sale: C:\Repos\streaming-datafun-05-sql\data\retail\sale.csv
+2026-05-25 15:44:41 | INFO | P05 | DONE loading sale rows: 5
+2026-05-25 15:44:41 | INFO | P05 | COMMIT: data load complete
+2026-05-25 15:44:41 | INFO | P05 |
+2026-05-25 15:44:41 | INFO | P05 | RUN SQL query: C:\Repos\streaming-datafun-05-sql\sql\sqlite\case_retail_query_store_count.sql
+2026-05-25 15:44:41 | INFO | P05 | ====================================
+2026-05-25 15:44:41 | INFO | P05 | case_retail_query_store_count.sql
+2026-05-25 15:44:41 | INFO | P05 | ====================================
+2026-05-25 15:44:41 | INFO | P05 | store_count
+2026-05-25 15:44:41 | INFO | P05 | 3
+2026-05-25 15:44:41 | INFO | P05 |
+2026-05-25 15:44:41 | INFO | P05 | RUN SQL query: C:\Repos\streaming-datafun-05-sql\sql\sqlite\case_retail_query_sales_count.sql
+2026-05-25 15:44:41 | INFO | P05 | ====================================
+2026-05-25 15:44:41 | INFO | P05 | case_retail_query_sales_count.sql
+2026-05-25 15:44:41 | INFO | P05 | ====================================
+2026-05-25 15:44:41 | INFO | P05 | sale_count
+2026-05-25 15:44:41 | INFO | P05 | 5
+2026-05-25 15:44:41 | INFO | P05 |
+2026-05-25 15:44:41 | INFO | P05 | RUN SQL query: C:\Repos\streaming-datafun-05-sql\sql\sqlite\case_retail_query_sales_aggregate.sql
+2026-05-25 15:44:41 | INFO | P05 | ====================================
+2026-05-25 15:44:41 | INFO | P05 | case_retail_query_sales_aggregate.sql
+2026-05-25 15:44:41 | INFO | P05 | ====================================
+2026-05-25 15:44:41 | INFO | P05 | sale_count, total_revenue, avg_sale_amount
+2026-05-25 15:44:41 | INFO | P05 | 5, 505.0, 101.0
+2026-05-25 15:44:41 | INFO | P05 |
+2026-05-25 15:44:41 | INFO | P05 | RUN SQL query: C:\Repos\streaming-datafun-05-sql\sql\sqlite\case_retail_query_sales_by_category.sql
+2026-05-25 15:44:41 | INFO | P05 | ====================================
+2026-05-25 15:44:41 | INFO | P05 | case_retail_query_sales_by_category.sql
+2026-05-25 15:44:41 | INFO | P05 | ====================================
+2026-05-25 15:44:41 | INFO | P05 | product_category, sale_count, total_revenue, avg_sale_amount
+2026-05-25 15:44:41 | INFO | P05 | Outdoors, 1, 250.0, 250.0
+2026-05-25 15:44:41 | INFO | P05 | Clothing, 2, 180.0, 90.0
+2026-05-25 15:44:41 | INFO | P05 | Food, 2, 75.0, 37.5
+2026-05-25 15:44:41 | INFO | P05 |
+2026-05-25 15:44:41 | INFO | P05 | RUN SQL query: C:\Repos\streaming-datafun-05-sql\sql\sqlite\case_retail_query_kpi_revenue.sql
+2026-05-25 15:44:41 | INFO | P05 | ====================================
+2026-05-25 15:44:41 | INFO | P05 | case_retail_query_kpi_revenue.sql
+2026-05-25 15:44:41 | INFO | P05 | ====================================
+2026-05-25 15:44:41 | INFO | P05 | store_id, store_name, city, region, sale_count, total_revenue, avg_sale_amount
+2026-05-25 15:44:41 | INFO | P05 | S002, Lakeside Shop, Ely, North, 2, 280.0, 140.0
+2026-05-25 15:44:41 | INFO | P05 | S001, North Market, Duluth, North, 2, 165.0, 82.5
+2026-05-25 15:44:41 | INFO | P05 | S003, Central Plaza, Mankato, South, 1, 60.0, 60.0
+2026-05-25 15:44:41 | INFO | P05 | END main()

@@ -1,4 +1,6 @@
-# datafun-05-sql
+# Streaming Data Analytics
+
+## streaming-datafun-05-sql
 
 [![Python](https://img.shields.io/badge/python-3.14-blue?logo=python&logoColor=white)](https://www.python.org/)
 

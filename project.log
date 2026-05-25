@@ -60,3 +60,167 @@
 2026-05-25 15:44:41 | INFO | P05 | S001, North Market, Duluth, North, 2, 165.0, 82.5
 2026-05-25 15:44:41 | INFO | P05 | S003, Central Plaza, Mankato, South, 1, 60.0, 60.0
 2026-05-25 15:44:41 | INFO | P05 | END main()
+2026-05-25 16:39:09 | INFO | P05 | === RUN START ===
+2026-05-25 16:39:09 | INFO | P05 | project=P05 Library Pipeline Example (SQLite)
+2026-05-25 16:39:09 | INFO | P05 | repo_dir=streaming-datafun-05-sql
+2026-05-25 16:39:09 | INFO | P05 | python=3.14.2
+2026-05-25 16:39:09 | INFO | P05 | os=Windows 11
+2026-05-25 16:39:09 | INFO | P05 | shell=powershell
+2026-05-25 16:39:09 | INFO | P05 | cwd=.
+2026-05-25 16:39:09 | INFO | P05 | github_actions=False
+2026-05-25 16:39:09 | INFO | P05 | START main()
+2026-05-25 16:39:09 | INFO | P05 | ROOT_DIR: C:\Repos\streaming-datafun-05-sql
+2026-05-25 16:39:09 | INFO | P05 | DATA_DIR: C:\Repos\streaming-datafun-05-sql\data\library
+2026-05-25 16:39:09 | INFO | P05 | ARTIFACTS_DIR: C:\Repos\streaming-datafun-05-sql\artifacts\sqlite
+2026-05-25 16:39:09 | INFO | P05 | DB_PATH: C:\Repos\streaming-datafun-05-sql\artifacts\sqlite\library.sqlite
+2026-05-25 16:39:09 | INFO | P05 | BRANCH_CSV: C:\Repos\streaming-datafun-05-sql\data\library\branch.csv
+2026-05-25 16:39:09 | INFO | P05 | CHECKOUT_CSV: C:\Repos\streaming-datafun-05-sql\data\library\checkout.csv
+2026-05-25 16:39:09 | INFO | P05 | All required input files found
+2026-05-25 16:39:09 | INFO | P05 | Artifacts folder ready: C:\Repos\streaming-datafun-05-sql\artifacts\sqlite
+2026-05-25 16:39:09 | INFO | P05 | Creating library database tables
+2026-05-25 16:39:09 | INFO | P05 | Library database tables created
+2026-05-25 16:39:09 | INFO | P05 | LOAD CSV -> table branch: C:\Repos\streaming-datafun-05-sql\data\library\branch.csv
+2026-05-25 16:39:09 | INFO | P05 | DONE loading branch rows: 3
+2026-05-25 16:39:09 | INFO | P05 | LOAD CSV -> table checkout: C:\Repos\streaming-datafun-05-sql\data\library\checkout.csv
+2026-05-25 16:39:09 | INFO | P05 | DONE loading checkout rows: 5
+2026-05-25 16:39:09 | INFO | P05 | COMMIT: library data load complete
+2026-05-25 16:39:09 | INFO | P05 |
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | Branch count
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | branch_count
+2026-05-25 16:39:09 | INFO | P05 | 3
+2026-05-25 16:39:09 | INFO | P05 |
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | Checkout count
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | checkout_count
+2026-05-25 16:39:09 | INFO | P05 | 5
+2026-05-25 16:39:09 | INFO | P05 |
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | Total fine amount
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | total_fine_amount
+2026-05-25 16:39:09 | INFO | P05 | 2.0
+2026-05-25 16:39:09 | INFO | P05 |
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | Checkouts by branch
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | branch_id, branch_name, city, checkout_count, total_fines
+2026-05-25 16:39:09 | INFO | P05 | B001, Downtown Branch, Duluth, 2, 1.5
+2026-05-25 16:39:09 | INFO | P05 | B002, East Side Branch, Ely, 2, 0.5
+2026-05-25 16:39:09 | INFO | P05 | B003, South Branch, Mankato, 1, 0.0
+2026-05-25 16:39:09 | INFO | P05 |
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | Checkouts by material type
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | material_type, checkout_count, avg_duration_days, total_fines
+2026-05-25 16:39:09 | INFO | P05 | Book, 3, 16.33, 0.0
+2026-05-25 16:39:09 | INFO | P05 | Magazine, 1, 7.0, 0.5
+2026-05-25 16:39:09 | INFO | P05 | DVD, 1, 7.0, 1.5
+2026-05-25 16:39:09 | INFO | P05 |
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | Average checkout duration by branch
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | branch_name, avg_duration_days
+2026-05-25 16:39:09 | INFO | P05 | South Branch, 14.0
+2026-05-25 16:39:09 | INFO | P05 | East Side Branch, 14.0
+2026-05-25 16:39:09 | INFO | P05 | Downtown Branch, 10.5
+2026-05-25 16:39:09 | INFO | P05 |
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | Highest fine checkouts
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | checkout_id, branch_name, material_type, duration_days, fine_amount, checkout_date
+2026-05-25 16:39:09 | INFO | P05 | CO002, Downtown Branch, DVD, 7, 1.5, 2026-01-03
+2026-05-25 16:39:09 | INFO | P05 | CO004, East Side Branch, Magazine, 7, 0.5, 2026-01-05
+2026-05-25 16:39:09 | INFO | P05 | CO003, East Side Branch, Book, 21, 0.0, 2026-01-04
+2026-05-25 16:39:09 | INFO | P05 | CO001, Downtown Branch, Book, 14, 0.0, 2026-01-02
+2026-05-25 16:39:09 | INFO | P05 | CO005, South Branch, Book, 14, 0.0, 2026-01-06
+2026-05-25 16:39:09 | INFO | P05 |
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | Library KPI summary
+2026-05-25 16:39:09 | INFO | P05 | ====================================
+2026-05-25 16:39:09 | INFO | P05 | total_checkouts, active_branches, total_fines, avg_fine_amount, avg_duration_days
+2026-05-25 16:39:09 | INFO | P05 | 5, 3, 2.0, 0.4, 12.6
+2026-05-25 16:39:09 | INFO | P05 | SQLite connection closed
+2026-05-25 16:39:09 | INFO | P05 | END main()
+2026-05-25 16:40:09 | INFO | P05 | === RUN START ===
+2026-05-25 16:40:09 | INFO | P05 | project=P05 Civic Event Pipeline Example (DuckDB)
+2026-05-25 16:40:09 | INFO | P05 | repo_dir=streaming-datafun-05-sql
+2026-05-25 16:40:09 | INFO | P05 | python=3.14.2
+2026-05-25 16:40:09 | INFO | P05 | os=Windows 11
+2026-05-25 16:40:09 | INFO | P05 | shell=powershell
+2026-05-25 16:40:09 | INFO | P05 | cwd=.
+2026-05-25 16:40:09 | INFO | P05 | github_actions=False
+2026-05-25 16:40:09 | INFO | P05 | START main()
+2026-05-25 16:40:09 | INFO | P05 | ROOT_DIR: C:\Repos\streaming-datafun-05-sql
+2026-05-25 16:40:09 | INFO | P05 | DATA_DIR: C:\Repos\streaming-datafun-05-sql\data\civic_event
+2026-05-25 16:40:09 | INFO | P05 | ARTIFACTS_DIR: C:\Repos\streaming-datafun-05-sql\artifacts\duckdb
+2026-05-25 16:40:09 | INFO | P05 | DB_PATH: C:\Repos\streaming-datafun-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-05-25 16:40:09 | INFO | P05 | CIVIC_EVENT_CSV: C:\Repos\streaming-datafun-05-sql\data\civic_event\civic_event.csv
+2026-05-25 16:40:09 | INFO | P05 | ATTENDANCE_CSV: C:\Repos\streaming-datafun-05-sql\data\civic_event\attendance.csv
+2026-05-25 16:40:09 | INFO | P05 | All required input files found
+2026-05-25 16:40:09 | INFO | P05 | Artifacts folder ready: C:\Repos\streaming-datafun-05-sql\artifacts\duckdb
+2026-05-25 16:40:09 | INFO | P05 | Creating civic event database tables
+2026-05-25 16:40:09 | INFO | P05 | Civic event database tables created
+2026-05-25 16:40:09 | INFO | P05 | Loading civic event CSV data
+2026-05-25 16:40:09 | INFO | P05 | CSV data loaded into DuckDB tables
+2026-05-25 16:40:09 | INFO | P05 |
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | Civic event count
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | civic_event_count
+2026-05-25 16:40:09 | INFO | P05 | 3
+2026-05-25 16:40:09 | INFO | P05 |
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | Attendance record count
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | attendance_record_count
+2026-05-25 16:40:09 | INFO | P05 | 5
+2026-05-25 16:40:09 | INFO | P05 |
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | Total contribution amount
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | total_contribution
+2026-05-25 16:40:09 | INFO | P05 | 105.0
+2026-05-25 16:40:09 | INFO | P05 |
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | Attendance and contributions by event
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | civic_event_id, event_name, location, organizer, attendance_count, checked_in_count, total_contribution, avg_contribution
+2026-05-25 16:40:09 | INFO | P05 | E001, Winter Fundraiser, Ely, Community Council, 2, 2, 75.0, 37.5
+2026-05-25 16:40:09 | INFO | P05 | E003, Arts Fair, Mankato, Arts Alliance, 1, 1, 20.0, 20.0
+2026-05-25 16:40:09 | INFO | P05 | E002, Tech Meetup, Duluth, North Tech Group, 2, 2, 10.0, 5.0
+2026-05-25 16:40:09 | INFO | P05 |
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | Attendance by attendee type
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | attendee_type, attendance_count, checked_in_count, total_contribution, avg_contribution
+2026-05-25 16:40:09 | INFO | P05 | Guest, 3, 3, 55.0, 18.33
+2026-05-25 16:40:09 | INFO | P05 | Member, 2, 2, 50.0, 25.0
+2026-05-25 16:40:09 | INFO | P05 |
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | Events by location
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | location, event_count
+2026-05-25 16:40:09 | INFO | P05 | Ely, 1
+2026-05-25 16:40:09 | INFO | P05 | Mankato, 1
+2026-05-25 16:40:09 | INFO | P05 | Duluth, 1
+2026-05-25 16:40:09 | INFO | P05 |
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | Highest contribution attendance records
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | attendance_id, event_name, location, attendee_type, checked_in, contribution, attend_date
+2026-05-25 16:40:09 | INFO | P05 | AT001, Winter Fundraiser, Ely, Member, 1, 50.0, 2026-01-10
+2026-05-25 16:40:09 | INFO | P05 | AT002, Winter Fundraiser, Ely, Guest, 1, 25.0, 2026-01-10
+2026-05-25 16:40:09 | INFO | P05 | AT005, Arts Fair, Mankato, Guest, 1, 20.0, 2026-01-12
+2026-05-25 16:40:09 | INFO | P05 | AT004, Tech Meetup, Duluth, Guest, 1, 10.0, 2026-01-11
+2026-05-25 16:40:09 | INFO | P05 | AT003, Tech Meetup, Duluth, Member, 1, 0.0, 2026-01-11
+2026-05-25 16:40:09 | INFO | P05 |
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | Civic event KPI summary
+2026-05-25 16:40:09 | INFO | P05 | ====================================
+2026-05-25 16:40:09 | INFO | P05 | total_attendance_records, active_events, total_checked_in, total_contribution, avg_contribution
+2026-05-25 16:40:09 | INFO | P05 | 5, 3, 5, 105.0, 21.0
+2026-05-25 16:40:09 | INFO | P05 | DuckDB connection closed
+2026-05-25 16:40:09 | INFO | P05 | END main()

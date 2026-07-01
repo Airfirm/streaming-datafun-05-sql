@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: 1) Checkout repository code
-        uses: actions/checkout@v6 # OBS: Keep current major.
+        uses: actions/checkout@v7 # OBS: Keep current major.
 
       - name: 2) Initialize report file (placeholder)
         # WHY: Ensure the job summary always has a report, even if Lychee crashes early.
